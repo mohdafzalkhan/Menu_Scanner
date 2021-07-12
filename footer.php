@@ -40,3 +40,4 @@
 		</script>
 		<script src="<?php echo FRONT_SITE_PATH?>assets/js/custom.js"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+

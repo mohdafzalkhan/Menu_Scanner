@@ -51,7 +51,7 @@ if(isset($_POST['place_order'])){
                                    &nbsp;
                                 </div>
                             <br>    
-                        <a href="<?php echo FRONT_SITE_PATH?>table"><button type="button" class="btn btn-success"><h4>Eat At Restaurant</h4></button></a>
+                        <a href="<?php echo FRONT_SITE_PATH?>scanner"><button type="button" class="btn btn-success"><h4>Eat At Restaurant</h4></button></a>
                          <div class="header-wishlist">
                                    &nbsp;
                                 </div>
