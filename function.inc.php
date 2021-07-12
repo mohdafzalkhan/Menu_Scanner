@@ -26,6 +26,7 @@ function redirect($link){
 	die();
 }
 
+
 function send_email($email,$html,$subject){
 	$mail=new PHPMailer(true);
 	$mail->isSMTP();
@@ -33,9 +34,9 @@ function send_email($email,$html,$subject){
 	$mail->Port=587;
 	$mail->SMTPSecure="tls";
 	$mail->SMTPAuth=true;
-	$mail->Username="EMAIL";
-	$mail->Password="PASSWORD";
-	$mail->SetFrom("EMAIL");
+	$mail->Username="MenuScannerHelp@gmail.com";
+	$mail->Password="Admin@123";
+	$mail->SetFrom("MenuScannerHelp@gmail.com");
 	$mail->addAddress($email);
 	$mail->IsHTML(true);
 	$mail->Subject=$subject;
@@ -51,7 +52,6 @@ function send_email($email,$html,$subject){
 		//echo "Error occur";
 	}
 }
-
 function rand_str(){
 	$str=str_shuffle("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz");
 	return $str=substr($str,0,15);

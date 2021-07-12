@@ -78,6 +78,7 @@ jQuery('#frmForgotPassword').on('submit',function(e){
 });	
 
 
+
 function set_checkbox(id){
 	var cat_dish=jQuery('#cat_dish').val();
 	var check=cat_dish.search(":"+id);
