@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Food Ordering Admin Login</title>
+  <title>Menu Scanner Admin Login</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/css/vendor.bundle.base.css">
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left p-5">
               <div class="brand-logo text-center">
-                <img src="assets/images/logo.png" alt="logo">
+                <img src="assets/images/logo.jpeg" alt="logo">
               </div>
               <h6 class="font-weight-light">Sign in to continue.</h6>
               <form class="pt-3" method="post">
