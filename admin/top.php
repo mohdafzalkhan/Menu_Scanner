@@ -64,8 +64,8 @@ if($cur_path=='' || $cur_path=='index.php'){
           
         </ul>
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.php"><img src="assets/images/logo.png" alt="logo"/></a>
-          <a class="navbar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="index.php"><img src="assets/images/logo.jpeg" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo.jpeg" alt="logo"/></a>
         </div>
         <ul class="navbar-nav navbar-nav-right">
           
@@ -132,6 +132,12 @@ if($cur_path=='' || $cur_path=='index.php'){
             <a class="nav-link" href="dish.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title">Dish</span>
+            </a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link" href="table_order.php">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title">Order Master</span>
             </a>
           </li>
 		  

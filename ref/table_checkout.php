@@ -12,9 +12,9 @@ $userArr=getUserDetailsByid();
 if(isset($_POST['place_order'])){
 	$name=get_safe_value($_POST['name']);
 	$mobile=get_safe_value($_POST['mobile']);
-	$table_number=get_safe_value($_POST['table_number']);
+	
 	$added_on=date('Y-m-d h:i:s');
-	$sql="insert into order_master_table(user_id,name,mobile,total_price,order_status,payment_status,table_number,added_on) values('".$_SESSION['FOOD_USER_ID']."','$name','$mobile','$totalPrice','1','pending','$table_number','$added_on')";
+	$sql="insert into order_master_table(user_id,name,mobile,total_price,order_status,payment_status,added_on) values('".$_SESSION['FOOD_USER_ID']."','$name','$mobile','$totalPrice','1','pending','$added_on')";
 	mysqli_query($con,$sql);
 	$insert_id=mysqli_insert_id($con);
 	$_SESSION['ORDER_ID']=$insert_id;
@@ -27,32 +27,24 @@ if(isset($_POST['place_order'])){
 }
 ?>
 
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
-        <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="checkout-area pb-80 pt-100">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5" ><br>
-                        <br><br>
-                        <h4 style="padding-left:150px;margin:0;padding-bottom:0;">Scan QR CODE</h4>
-                        <video id="preview" width="100%" height="50%"></video>
-                    </div>
-                    <div class="col-lg-4">
-
-                </div>
-                    <div class="panel panel-default">
+                    <div class="col-lg-9">
+                        <div class="checkout-wrapper">
+                            <div id="faq" class="panel-group">
+                                <div class="panel panel-default">
                                 <h3>Enter Information</h3>
                                     <form method="post">
                                     <label>Enter Name</label>
                                         <input type="text" name="name" required>
-                                        <label>Enter Mobile Number</label>  
+                                        <label>Enter Mobile Number</label>
                                         <input type="text" name="mobile" required>
-                                        <label>Enter Table Number:</label>
-                                        <input type="tex" name="table_number" id="table" required> 
                                           <button type="submit" class="btn btn-primary btn-lg" name="place_order">SUBMIT</button>
                                     </form>
 						   </div>
+                        </div>
+                    </div>
                     <div class="col-lg-3">
                         <div class="checkout-progress">
                             <div class="shopping-cart-content-box">
@@ -80,28 +72,11 @@ if(isset($_POST['place_order'])){
 							</div>
                         </div>
                     </div>
+                </div>
             </div>
-            
-</div>
-  
+        </div>
+        
 
-        <script>
-           let scanner = new Instascan.Scanner({ video: document.getElementById('preview'),mirror: false});
-           Instascan.Camera.getCameras().then(function(cameras){
-               if(cameras.length > 0 ){
-                   scanner.start(cameras[0]);
-               } else{
-                   alert('No cameras found');
-               }
-
-           }).catch(function(e) {
-               console.error(e);
-           });
-
-           scanner.addListener('scan',function(c){
-               document.getElementById('table').value=c;
-           });
-</script>
 <?php
 include("footer.php");
 ?>
