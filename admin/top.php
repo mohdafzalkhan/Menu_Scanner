@@ -137,10 +137,15 @@ if($cur_path=='' || $cur_path=='index.php'){
              <li class="nav-item">
             <a class="nav-link" href="table_order.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">Order Master</span>
+              <span class="menu-title">Table Order Master</span>
             </a>
           </li>
-		  
+		  	  <li class="nav-item">
+            <a class="nav-link" href="order.php">
+              <i class="mdi mdi-view-headline menu-icon"></i>
+              <span class="menu-title">Delivery Order Master</span>
+            </a>
+          </li>
 		  <li class="nav-item">
             <a class="nav-link" href="banner.php">
               <i class="mdi mdi-view-headline menu-icon"></i>

@@ -174,7 +174,7 @@ $totalCartDish=count($cartArr);
                                         </div>
                                         <div class="shopping-cart-btn">
                                             <a href="<?php echo FRONT_SITE_PATH?>cart">view cart</a>
-                                            <a href="<?php echo FRONT_SITE_PATH?>select_place">checkout</a>
+                                            <a href="<?php echo FRONT_SITE_PATH?>select_place.php">checkout</a>
                                         </div>
                                     </div>
 									<?php } ?>

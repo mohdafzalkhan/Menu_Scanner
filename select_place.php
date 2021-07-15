@@ -56,19 +56,13 @@ if(isset($_POST['place_order'])){
                                    &nbsp;
                                 </div>
                             <br>
-                       <a href="<?php echo FRONT_SITE_PATH?>checkout"> <button type="button" class="btn btn-warning" onclick="table();"><h4>Deliver At Home</h4></button></a>
+                       <a href="<?php echo FRONT_SITE_PATH?>checkout"> <button type="button" class="btn btn-warning"><h4>Deliver At Home</h4></button></a>
                             </center>
                         <br><br><br>
                     </div>
          </div>
     </div>
 </div>
-<script>
-function table()
-    {
-     redirect(FRONT_SITE_PATH.'table_checkout');
-    }
-</script>
 
 <?php
 include("footer.php");
